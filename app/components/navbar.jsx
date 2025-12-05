@@ -12,9 +12,9 @@ const Navbar = () => {
 
   const navHref = [
     { name: "Find Store", href: "/" },
-    { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "About Us", href: "/common/about" },
+    { name: "Careers", href: "/common/career" },
+    { name: "Contact Us", href: "/common/contact" },
   ];
 
   return (
@@ -22,12 +22,12 @@ const Navbar = () => {
       {/* Main Wrapper */}
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
         {/* Left Section */}
-        <div className="flex items-center gap-2">
+        <Link href={"/"} className="flex items-center gap-2">
           <Image src="/logo.svg" width={40} height={40} alt="logo" />
           <h2 className="text-xl font-semibold dark:text-white text-black">
             Xsklep
           </h2>
-        </div>
+        </Link>
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex gap-6 ml-10">

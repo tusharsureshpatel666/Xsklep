@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -13,19 +14,20 @@ const Navbar = () => {
         h-auto           /* height auto so padding controls it */
       "
     >
-      <div className="flex items-center gap-2">
+      <Link href={"/"} className="flex items-center gap-2">
         <Image src="/logo.svg" width={40} height={40} alt="logo" />
         <h2 className="text-xl font-semibold dark:text-white text-black">
           Xsklep
         </h2>
-      </div>
-
-      <Button
-        variant={"outline"}
-        className="cursor-pointer dark:text-white text-sm md:text-base"
-      >
-        T & C
-      </Button>
+      </Link>
+      <Link href={"/common/privacy"}>
+        <Button
+          variant={"outline"}
+          className="cursor-pointer  dark:text-white  md:text-base"
+        >
+          Privacy
+        </Button>
+      </Link>
     </div>
   );
 };
